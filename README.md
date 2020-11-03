@@ -1,8 +1,9 @@
-# Webhook for proctected branches
+# Webhook for protected branches
+
 GitHub Demo for protected branches
 
-
-Perl code based webhook for enabling protected branches:
+## **Description**
+This is a PERL code based webhook for enabling protected branches. The code uses GitHub's api interface for [updating branch restrictions](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#update-branch-protection). Upon the initial creation of the repository the protected branch is enabled for the master branch. In addition an api call to [create an issue](https://docs.github.com/en/free-pro-team@latest/rest/reference/issues#create-an-issue) notifying the owner that of the repository creation. 
 
 ## **Assumpmtions**
 
@@ -12,6 +13,8 @@ Perl code based webhook for enabling protected branches:
 
 
 Branch protection rule options located under your repository settings/branches
+
+Example: https://github.com/TestOrgkevfoste/githubdemo/settings/branches
 
 **Protect matching branches**
 
@@ -47,3 +50,19 @@ Rules applied to everyone including administrators
 
 - [ ] Allow deletions
 - [ ] Allow users with push access to delete matching branches.
+
+## Code base
+
+** branchrestrict.pl **
+
+## PERL module package requirements
+
+**Basic perl installation**
+
+**Additional perl modules required**
+
+*CGI*
+
+*JSON*
+
+*LWP::Simple*
